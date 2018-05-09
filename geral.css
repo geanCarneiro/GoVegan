@@ -1,0 +1,38 @@
+.main-background {
+	background-color: #0b0
+}
+#cab {
+	height: 10rem;
+	background-color: #afa;
+}
+
+.card {
+	float: left;
+	width: 18rem;
+	min-height: 25rem;
+	position: relative;
+}
+
+.card .btn {
+	position: absolute;
+	bottom: 1rem;
+}
+
+.imgDisplay {
+	width: 18rem;
+	height: 10rem;
+	overflow: hidden;
+}
+
+.nav-item:hover {
+    background-color: #afa;
+    height: 100%;
+}
+
+.col strong {
+    clear: both;
+}
+
+.col .categoria {
+    text-transform: capitalize;
+}
