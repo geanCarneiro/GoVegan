@@ -9,6 +9,14 @@
 .card {
 	float: left;
 	margin: 0.5rem;
+	width: 18rem;
+	min-height: 25rem;
+	position: relative;
+}
+
+.card .btn {
+	position: absolute;
+	bottom: 1rem;
 }
 
 .imgDisplay {
