@@ -1,0 +1,18 @@
+.main-background {
+	background-color: #0b0
+}
+#cab {
+	height: 10rem;
+	background-color: #afa;
+}
+
+.card {
+	float: left;
+	margin: 0.5rem;
+}
+
+.imgDisplay {
+	width: 18rem;
+	height: 10rem;
+	overflow: hidden;
+}
