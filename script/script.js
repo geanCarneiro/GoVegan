@@ -16,7 +16,8 @@ receitas.push([
     'Temperar com sal, azeite e orégano.',
     'Colocar a mistura em cima das rodelas de berinjela.',
     'Assar durante uns 15 ou 20 minutos em forno médio.'
-  ]
+  ],
+  'salada'
 ]);
 receitas.push([
   'Receita 2',
@@ -31,7 +32,8 @@ receitas.push([
     'primeiro passo',
     'segundo passo',
     'n passo'
-  ]
+  ],
+  'doce'
 ]);
 
 
@@ -81,19 +83,31 @@ function preencherElemComReceita(element, index){
 
 }
 
-function gerarCards(){
-  receitas.forEach(function(item, index){
-    write('<div class="card">');
-    write(' <div class="imgDisplay">');
-    write('   <img class="card-img-top" src="../img/' + item[2] + '">');
-    write('  </div>');
-    write('  <div class="card-body">');
-    write('    <h5 class="card-title">' + item[0] + '</h5>');
-    write('    <p class="card-text">' + item[1] + '</p>');
-    write('    <a href="javascript:abrirReceita(' + index + ')" class="btn btn-primary">Receita</a>');
-    write('  </div>');
-    write('</div>');
-  });
+function gerarCards(cat){
+  let msg = '';
+
+  let elems = Array.from(document.getElementsByClassName('cards'));
+
+  if(elems.length > 0){
+    receitas.forEach(function(item, index){
+      if(cat == '' || item[5] == cat){
+        msg += '<div class="card">';
+        msg += ' <div class="imgDisplay">';
+        msg += '   <img class="card-img-top" src="../img/' + item[2] + '">';
+        msg += '  </div>';
+        msg += '  <div class="card-body">';
+        msg += '    <h5 class="card-title">' + item[0] + '</h5>';
+        msg += '    <p class="card-text">' + item[1] + '</p>';
+        msg += '    <a href="javascript:abrirReceita(' + index + ')" class="btn btn-primary">Receita</a>';
+        msg += '  </div>';
+        msg += '</div>';
+      }
+    });
+  }
+
+  elems.forEach(function(elem){
+    elem.innerHTML = msg;
+  })
 }
 
 function abrirReceita(index){
@@ -104,6 +118,14 @@ function preencherElem(classe, inner){
   Array.from(document.getElementsByClassName(classe)).forEach(function(elem) {
     elem.innerHTML = inner + '<br>';
   });
+}
+
+function filtrar(cat) {
+  Array.from(document.getElementsByClassName('categoria')).forEach(function(elem){
+    elem.innerHTML = (cat == '') ? 'Tudo' : cat;
+  });
+
+  gerarCards(cat);
 }
 
 function writeln(txt, tag){
