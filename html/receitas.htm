@@ -10,8 +10,8 @@
   <body>
 <div class="container">
   <div class="row" id="cab">
-    <div class="bg-success col p-3">
-      Cabeçalho
+    <div class="cab bg-success col p-3 text-center align-middle">
+      Go Vegan
     </div>
   </div>
   <div class="row">
@@ -22,14 +22,17 @@
           </button>
           <div class="collapse navbar-collapse" id="navbarSupportedContent">
             <ul class="navbar-nav mr-auto">
+              <li class="nav-item">
+                <a class="nav-link" href="#">Inicio <span class="sr-only">(current)</span></a>
+              </li>
               <li class="nav-item active">
-                <a class="nav-link" href="#">Salgado <span class="sr-only">(current)</span></a>
+                <a class="nav-link" href="javascript:filtrar('')">Todos</a>
               </li>
               <li class="nav-item">
-                <a class="nav-link" href="#">Doce</a>
+                <a class="nav-link" href="javascript:filtrar('salada')">Salada</a>
               </li>
               <li class="nav-item">
-                <a class="nav-link" href="#">Saladas</a>
+                <a class="nav-link" href="javascript:filtrar('doce')">Doce</a>
               </li>
             </ul>
           </div>
@@ -39,22 +42,15 @@
   </div>
   <div class="row">
 
-    <div class="bg-warning p-5 col">
-      
-      <!-- <div class="card">
-        <div class="imgDisplay">
-          <img class="card-img-top" src="../img/Berinjela_assada_com_temperos.jpg">
-        </div>
-        <div class="card-body">
-          <h5 class="card-title">Berinjela assada com temperos</h5>
-          <p class="card-text">Ótima opção pra almoço ou lanche.</p>
-          <a href="javascript:abrirReceita(0)" class="btn btn-primary">Receita</a>
-        </div>
-      </div> -->
-      <script type="text/javascript">gerarCards()</script>
+    <div class="bg-warning p-3 p-md-5 col align-middle">
+        <strong>Categoria: <span class="categoria"></span></strong><br>
+        <span class="cards"></span>
     </div>
   </div>
 </div>
+    <script type="text/javascript">
+        filtrar('');
+    </script>
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js" integrity="sha384-smHYKdLADwkXOn1EmN1qk/HfnUcbVRZyYmZ4qpPea6sjB/pTJ0euyQp0Mk8ck+5T" crossorigin="anonymous"></script>
