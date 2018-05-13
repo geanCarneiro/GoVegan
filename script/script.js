@@ -35,6 +35,22 @@ receitas.push([
   ],
   'doce'
 ]);
+receitas.push([
+  'Receita 2',
+  'descrição da segunda receita',
+  'empadao.jpg',
+  [
+    '1 boca',
+    '2 olhos',
+    'qualquer coisa'
+  ],
+  [
+    'primeiro passo',
+    'segundo passo',
+    'n passo'
+  ],
+  'doce'
+]);
 
 
 
