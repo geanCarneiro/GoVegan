@@ -8,7 +8,7 @@
     <script type="text/javascript" src="../script/script.js"></script>
   </head>
   <body>
-<div class="container">
+    <div class="container">
   <div class="row" id="cab">
     <div class="cab bg-success col p-3 text-center align-middle">
       Go Vegan
@@ -23,30 +23,33 @@
           <div class="collapse navbar-collapse" id="navbarSupportedContent">
             <ul class="navbar-nav mr-auto">
               <li class="nav-item">
-                <a class="nav-link" href="index.htm">Inicio</a>
+                <a class="nav-link">Inicio</a>
               </li>
               <li class="nav-item">
-                <a class="nav-link" href="javascript:filtrar('')">Todos</a>
+                <a class="nav-link" href="javascript:abrirListaDeReceita('')">Todos</a>
               </li>
               <li class="nav-item">
-                <a class="nav-link" href="javascript:filtrar('acompanhamento')">Acompanhamento</a>
+                <a class="nav-link" href="javascript:abrirListaDeReceita('acompanhamento')">Acompanhamento</a>
               </li>
               <li class="nav-item">
-                <a class="nav-link" href="javascript:filtrar('salgado')">Salgado</a>
+                <a class="nav-link" href="javascript:abrirListaDeReceita('salgado')">Salgado</a>
               </li>
               <li class="nav-item">
-                <a class="nav-link" href="javascript:filtrar('sobremesa')">Sobremesa</a>
+                <a class="nav-link" href="javascript:abrirListaDeReceita('sobremesa')">Sobremesa</a>
               </li>
             </ul>
           </div>
         </nav>
-
     </div>
   </div>
-  <div class="row">
-    <div class="bg-warning p-3 p-md-5 col align-middle">
-        <strong>Categoria: <span class="categoria"></span></strong><br>
-        <span class="cards"></span>
+  <div class="row bg-warning main-div-home">
+    <div class="inner-inner">
+      <h1 class="nome text-center"></h1>
+      <img class="image img-fluid mx-auto d-block">
+      <h2>Ingredientes</h2>
+      <ul class="ingredientes"></ul>
+      <h2>Modo de Preparo</h2>
+      <ol class="comoFazer"></ol>
     </div>
   </div>
   <div class="row">
@@ -55,11 +58,11 @@
     </div>
   </div>
 </div>
-    <script type="text/javascript">
-        filtrar();
-    </script>
-    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js" integrity="sha384-smHYKdLADwkXOn1EmN1qk/HfnUcbVRZyYmZ4qpPea6sjB/pTJ0euyQp0Mk8ck+5T" crossorigin="anonymous"></script>
   </body>
+  <script type="text/javascript">
+    loadReceita();
+  </script>
+  <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js" integrity="sha384-smHYKdLADwkXOn1EmN1qk/HfnUcbVRZyYmZ4qpPea6sjB/pTJ0euyQp0Mk8ck+5T" crossorigin="anonymous"></script>
 </html>

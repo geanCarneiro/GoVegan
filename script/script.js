@@ -1,4 +1,4 @@
-var paginaReceita = '../receitaTeste.htm';
+var paginaReceita = 'receita.htm';
 var paginaListaReceitas = 'receitas.htm';
 var receitas = new Array();
 
@@ -160,7 +160,7 @@ function preencherElemComReceita(element, index){
   });
 
   Array.from(element.getElementsByClassName('image')).forEach(function(elem) {
-    elem.src = receitas[index][2];
+    elem.src = '../img/' + receitas[index][2];
   });
 
   Array.from(element.getElementsByClassName('ingredientes')).forEach(function(elem) {
