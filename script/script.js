@@ -1,4 +1,5 @@
 var paginaReceita = '../receitaTeste.htm';
+var paginaListaReceitas = 'receitas.htm';
 var receitas = new Array();
 
 receitas.push([
@@ -136,7 +137,14 @@ function preencherElem(classe, inner){
   });
 }
 
+function abrirListaDeReceita(cat) {
+  window.location.href = paginaListaReceitas + '#' + cat;
+}
+
 function filtrar(cat) {
+  if(typeof cat == 'undefined')
+    cat = window.location.hash.substring(1);
+
   Array.from(document.getElementsByClassName('categoria')).forEach(function(elem){
     elem.innerHTML = (cat == '') ? 'Tudo' : cat;
   });
