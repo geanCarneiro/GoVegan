@@ -135,11 +135,8 @@ receitas.push([
   'salgado'
 ]);
 
-// ignorar o que tem embaixo
 function loadReceita(index){
-
     preencherElemComReceita(document, index);
-
 }
 
 function preencherElemComReceita(element, index){
