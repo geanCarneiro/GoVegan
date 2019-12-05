@@ -1,4 +1,4 @@
-# ProjMult
+# Go Vegan
 
 **[WIP]**
 
